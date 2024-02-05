@@ -17,12 +17,86 @@ body{
     display: grid;
 
     grid-template-columns: 15rem 3fr;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: 10rem 4fr;
 }
 
 .header{
     grid-column: 2 / 3;
-    
+    padding: 10px 20px;
+}
+
+.search{
+    display: grid;
+    grid-template-columns: auto 1fr auto auto auto;
+    gap: 10px;
+    padding: 10px;
+}
+
+.header img{
+    height: 1.5rem;
+}
+
+.header input{
+    border-radius: 15px;
+    border: none;
+    background-color: lightgray;
+    color: black;
+    padding: 0px 5px;
+    max-height: 1.5rem;
+    max-width: 40rem;
+
+}
+
+.input ~ img{
+    justify-content: flex-end;
+}
+
+.profile-name{
+    align-self: end;
+    font-weight: bold;
+}
+
+.profile{
+    padding: 10px;
+
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+
+    align-items: center;
+}
+
+.profile > img{
+    height: 5rem;
+}
+
+.profile div:nth-child(1){
+    font-size: 0.75rem;
+}
+
+.profile div:nth-child(2){
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.profile .right{
+    display: flex;
+    flex-direction: column;
+}
+
+.profile .left{
+    justify-self: flex-end;
+}
+
+.profile .left button{
+    border: none;
+    background-color: rgb(2, 153, 240);
+    border-radius: 20px;
+    padding: 10px;
+    width: 5rem;
+    color: white;
+    font-weight: bold;
+    margin: 5px;
+    text-align: center;
 }
 
 .dashboard{
