@@ -155,9 +155,161 @@ body{
     display: grid;
 }
 
-.content{
+.dashboard + .content{
     background-color: lightgrey;
+    padding: 20px;
 
     grid-row: 2 / 3;
     grid-column: 2 / 3;
+
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1rem auto 1rem auto;
+    gap: 10px;
+}
+
+.content .project-heading{
+    grid-row: 1;
+    grid-column: 1 / 2;
+    
+    font-weight: bold;
+    font-size: 1rem;
+
+    align-self: flex-end;
+}
+
+.content .announcements-heading{
+    grid-row: 1;
+    grid-column: 2 / 3;
+    
+    font-weight: bold;
+    font-size: 1rem;
+
+    align-self: flex-end;
+}
+
+.content .trending-heading{
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+
+    font-weight: bold;
+    font-size: 1rem;
+
+    align-self: end;
+}
+
+.projects{
+    grid-column: 1 / 2;
+    grid-row: 2 / 5;
+
+
+    display: grid;
+    gap: 15px;
+    grid-template-rows: repeat(2, 15rem);
+    grid-auto-rows: 15rem;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+}
+
+.projects .project{
+    display: grid;
+    grid-row: 1fr 1fr 1fr;
+    padding: 20px 10px;
+
+    border-radius: 10px;
+    background-color: white;
+
+    border-left: 10px solid rgb(255, 183, 0);
+
+    box-shadow: 1px 1px 10px 2px grey;
+}
+
+.project .heading{
+    grid-column: 2;
+
+    font-weight: bold;
+}
+
+.project .content{
+    overflow: hidden;
+    grid-column: 2;
+
+    color: grey;
+}
+
+.project .footer{
+    grid-column: 2;
+    margin-left: auto;
+}
+
+.footer img{
+    height: 1.5rem;
+    margin: 10px;
+}
+
+.announcements{
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px 20px;
+
+    display: grid;
+    gap:10px;
+
+    box-shadow: 1px 1px 10px 2px grey;
+}
+
+.announcement{
+    border-bottom: 2px solid lightgrey;
+}
+
+.announcement .heading{
+    font-weight: bold;
+}
+
+.announcement .content{
+    color: grey;
+}
+
+.announcements .announcement:nth-last-child(1), .trending .items:nth-last-child(1){
+    border-bottom: none;
+}
+
+.trending{
+    background-color: white;
+    padding: 10px;
+
+    grid-row: 4 / 5;
+    grid-column: 2 / 3;
+
+    border-radius: 10px;
+
+    display: grid;
+    gap:10px;
+    grid-template-rows: repeat(4, auto);
+
+    box-shadow: 1px 1px 10px 2px grey;
+}
+
+.trending .items{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap:5px;
+
+    border-bottom: 2px solid lightgrey;
+}
+
+.items .username{
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.content .description{
+    font-size: 0.8rem;
+    color: grey;
+}
+
+.logo img{
+    height: 2rem;
 }
